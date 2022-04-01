@@ -16,7 +16,7 @@ app.post("/subscribe", (req, res) => {
   // Get pushSubscription object
   const subscription = req.body;
   console.log(subscription);
-
+  webpush.sendNotification(subscription, "Your Push Payload Text");
   // Send 201 - resource created
   // res.status(201).json({});
 
